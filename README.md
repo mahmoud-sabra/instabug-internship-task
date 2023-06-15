@@ -71,6 +71,6 @@ Using Postman to Testing  API.
   ![Alt text](image-8.png)
 ---
 ## Future updating
-I will use Helm manifests for kubernetes to deploy the app using them on kubernetes with adding config to support high availability and volume persistence and exposing service to the public
+I will use Helm manifests for kubernetes to deploy the app using them on kubernetes with adding config to support high availability and volume persistence and exposing service to the public (you can use minikube to test).
 
 
