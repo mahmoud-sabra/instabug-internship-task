@@ -1,6 +1,6 @@
 # Table of content
 
------
+----
 
 1. Information about App.
 
@@ -12,11 +12,10 @@
 
 5. Future updating
 
------
+
 
 ## Information about App.
-
-  
+-----
 
 This program is very simple, it connects to a MySQL database based on the following env vars:
 
@@ -40,10 +39,10 @@ And exposes itself on port 9090:
 
 * On PATCH it updates the creation date of the row with the same ID as the one specified in query parameter `id`
 
-_______
+
 
 ## Docker
-
+-----
 > My Dockerfile consists of two stages and is used to build a Go application and create a minimal runtime image.
 
   
@@ -96,18 +95,18 @@ My Dockerfile follows a multi-stage approach to optimize the resulting image siz
 
 And The Docker Compose file is used to define and configure the services required for a complete environment consisting of a Go application ("app" service) and a MySQL database ("db" service).
 
-----
+
 
 ## CI/CD
-
+------
 Using Jenkins to build docker image and login to dockerhub then push it with specific tag
 
 here is a link to docker image https://hub.docker.com/r/ma7moudsabra/instabugtask
 
-----
+
 
 ## Testing API
-
+------
 Using Postman to Testing  API.
 
 - First On GET it returns all recorded rows.
@@ -140,8 +139,8 @@ Using Postman to Testing  API.
 
   ![Alt text](image-8.png)
 
----
 
-## Future updating
 
+## Future Plan
+------
 I will use Helm manifests for kubernetes to deploy the app using them on kubernetes with adding config to support high availability and volume persistence and exposing service to the public (you can use minikube to test).
