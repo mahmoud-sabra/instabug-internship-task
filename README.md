@@ -1,8 +1,7 @@
 # Table of content
-
 ----
 
-1. Information about App.
+1. Information about App
 
 2. Docker
 
@@ -13,8 +12,7 @@
 5. Future updating
 
 
-
-## Information about App.
+## Information about App
 -----
 
 This program is very simple, it connects to a MySQL database based on the following env vars:
@@ -96,13 +94,11 @@ My Dockerfile follows a multi-stage approach to optimize the resulting image siz
 And The Docker Compose file is used to define and configure the services required for a complete environment consisting of a Go application ("app" service) and a MySQL database ("db" service).
 
 
-
 ## CI/CD
 ------
 Using Jenkins to build docker image and login to dockerhub then push it with specific tag
 
 here is a link to docker image https://hub.docker.com/r/ma7moudsabra/instabugtask
-
 
 
 ## Testing API
@@ -138,7 +134,6 @@ Using Postman to Testing  API.
   After
 
   ![Alt text](image-8.png)
-
 
 
 ## Future Plan
