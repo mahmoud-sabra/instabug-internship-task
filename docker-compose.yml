@@ -1,4 +1,8 @@
+#Specifies the version of the Docker Compose file syntax being used
 version: '3'
+
+# Defines the services to be run as part of the Docker Compose environment.
+# In Our case, there are two services: "app" and "db".
 services:
   app:
     build:
@@ -7,16 +11,21 @@ services:
     ports:
       - 9090:9090
     depends_on:
-      - db
+       - db
+       
+    restart: unless-stopped
     environment:
-      - 'MYSQL_PORT=3306'
-      - 'MYSQL_HOST=db'
       - 'MYSQL_USER=root'
       - 'MYSQL_PASS=root'
-    restart: unless-stopped
+      - 'MYSQL_PORT=3306'
+      - 'MYSQL_HOST=db'
+      
+   
   db:
     image: mysql:latest
     ports:
       - 3306:3306
     environment:
       MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - /data/instabugTask:/var/lib/mysql
